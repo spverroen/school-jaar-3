@@ -27,7 +27,6 @@ for($i = 0; $i < $daysHad; $i++) {
     // Base cost per day for a small car
     if($car == "smallCar") {
         $endCost += 50;
-        echo "i do work";
     } 
 
     // Base cost per day for a big car
