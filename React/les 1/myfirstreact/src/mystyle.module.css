@@ -1,0 +1,12 @@
+.bigblue {
+    background-color: dodgerblue;
+    padding: 40px;  
+    font-size: Arial;
+    text-align: center;
+}
+
+.navbar {
+    background-color: blue;
+    padding: 16px;
+    font-size: large;
+}

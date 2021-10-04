@@ -1,0 +1,31 @@
+.navbar {
+    background-color: blue;
+    padding: 16px;
+    font-size: large;
+}
+
+.footer {
+    padding: 16px;
+    font-size: large;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.content {
+    width: 80%;
+    background-color: lightgray;
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+    
+}

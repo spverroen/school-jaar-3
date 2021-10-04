@@ -1,11 +1,19 @@
 
 import './App.css';
-import Garage from './Garage.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import Sidebar from './components/Sidebar.js';
+import Content from './components/Content.js';
 
 function App() {
   return (
     <div className="App">
-      <Garage />
+      <Header />
+      <div>
+        <Sidebar />
+        <Content />
+      </div>
+      <Footer />
     </div>
   );
 }
