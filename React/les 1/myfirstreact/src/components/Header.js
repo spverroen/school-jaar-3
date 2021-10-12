@@ -1,9 +1,13 @@
 import "./main.css";
+import "../index.css";
+import NavbarItem from "./NavbarItem";
 
 function Header() {
+    let json = ["Home", "About", "Contact"];
+    let jsx = json.map((item) => <span>{item}</span>);
     return (
-        <div class="navbar">
-            <div>Header</div>
+        <div>
+            { jsx }
         </div>
     )
 

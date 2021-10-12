@@ -1,19 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import "./index.css";
 
+export default function App() {
+  return (
+    <Router>
+      <div className="h-screen flex flex-col">
+        <div class="list" className="flex flex-row justify-between items-center bg-gray-600 p-4">
+          <div>
+            <Link to="/">Home</Link>
+          </div>
+          <div>
+            <Link to="/blogs">Blog Articles</Link>
+          </div>
+          <div>
+            <Link to="/contact">Contact Me</Link>
+          </div>
+        </div>
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App></App>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/blogs">
+            <Blogs />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
+ReactDOM.render(<App />, document.getElementById("root"));
